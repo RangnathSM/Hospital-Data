@@ -39,7 +39,7 @@ const Hospital = () => {
 
     return ( 
         <Box  display='flex' maxWidth='100%' maxHeight='100%' sx={{background:'#FAF5EE',}}>
-           <Box paddingY='20px' paddingX='0px' width={{xl:'800px', lg:'800px', md:'800px', sm:'550px', xs:'480px'}} height='100%' marginLeft={{xl:'180px', lg:'15px', md:'50px', sm:'20px'}}>
+           <Box paddingY='20px' paddingX='0px' width={{xl:'800px', lg:'800px', md:'800px', sm:'550px', xs:'480px'}} height='100%' marginLeft={{xl:'180px', lg:'15px', md:'110px', sm:'20px'}}>
            <Box width={{xl:'600px', lg:'600px', md:'600px', sm:'550px', xs:'480px', }}>
             <Box display={'flex'} width={{xl:'600px', lg:'600px', md:'600px', sm:'550px', xs:'480px'}}>
             <Typography sx={{fontSize:'30px', fontWeight:'500', color:'#1746A2', width:'300px'}}>{hospitalData.name}</Typography>
@@ -70,9 +70,9 @@ const Hospital = () => {
             </Grid>
             </Box>
 
-            <Box  minWidth={{xl:'688px', lg:'688px', md:'688px', sm:'550px', xs:'480px'}}>
+            <Box  width={{xl:'688px', lg:'688px', md:'688px', sm:'550px', xs:'480px'}}>
             <Grid  height='400px' sx={{background:'white'}} marginTop='20px' borderRadius='20px' border= '1px solid #F7811740' boxShadow='0px 0px 4px 0px #0000001F'>
-            <Card sx={{borderRadius:'20px', border:'none', height:'100%',minWidth:{xl:'688px', lg:'688px', md:'688px', sm:'550px', xs:'480px'}}}>
+            <Card sx={{borderRadius:'20px', border:'none', height:'100%',width:{xl:'688px', lg:'688px', md:'688px', sm:'550px', xs:'480px'}}}>
               <CardContent>
                     <Typography sx={{fontSize:'18px', fontWeight:'500', color:'#1746A2',marginLeft:'10px', margintop:'20px'}}>Department Asset</Typography>
                     <Chart
@@ -94,7 +94,7 @@ const Hospital = () => {
             </Grid>
             </Box>
             
-            <Box maxWidth='520px' marginLeft={{xl:'0px', lg:'0px', md:'140px', sm:'20px'}}>
+            <Box maxWidth='520px' marginLeft={{xl:'0px', lg:'0px', md:'80px', sm:'15px'}}>
             <Grid maxWidth='520px' maxHeight='180px' sx={{background:'white'}} marginTop='20px' borderRadius='20px' border= '1px solid #F7811740' boxShadow='0px 0px 4px 0px #0000001F'>
             <Card sx={{borderRadius:'20px', border:'none', height:'100%'}}>
             <CardContent>
@@ -152,7 +152,7 @@ const Hospital = () => {
             </Box>
            </Box>
 
-           <Box maxWidth='520px' marginLeft={{xl:'20px', lg:'20px', md:'140px', sm:'20px'}} >
+           <Box maxWidth='520px' marginLeft={{xl:'20px', lg:'20px', md:'80px', sm:'15px'}} >
            <Box>
                 <Grid  maxWidth='520px' maxHeight='196px' sx={{background:'white'}} marginTop='20px' borderRadius='20px' border= '1px solid #F7811740' boxShadow='0px 0px 4px 0px #0000001F'>
                 <Card sx={{borderRadius:'20px', border:'none', height:'100%'}}>
