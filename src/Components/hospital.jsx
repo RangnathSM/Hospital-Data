@@ -27,7 +27,7 @@ const Hospital = () => {
         ],
         incidentStatistics: {
           total: 10,
-          cleared: 70,
+          cleared: 80,
           notCleared: 20,
         },
       };
