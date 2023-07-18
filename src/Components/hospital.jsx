@@ -157,7 +157,7 @@ const Hospital = () => {
                 <Grid  width='520px' maxHeight='196px' sx={{background:'white'}} marginTop='20px' borderRadius='20px' border= '1px solid #F7811740' boxShadow='0px 0px 4px 0px #0000001F'>
                 <Card sx={{borderRadius:'20px', border:'none', height:'100%'}}>
                 <CardContent>
-                        <Box marginLeft='140px' marginTop='35px'>
+                        <Box marginLeft='160px' marginTop='35px'>
                         <Typography sx={{fontSize:'22px', fontWeight:'500', color:'#1746A2', marginLeft:'49px'}}>Plus</Typography>
                         <Typography ><img src='/images/plan.svg'style={{width:'50px', height:'40px', marginLeft:'48px'}} alt=''/></Typography>
                         <Typography sx={{fontSize:'22px', fontWeight:'500',color:'#212427'}}>Current Plan</Typography>
@@ -172,7 +172,7 @@ const Hospital = () => {
                 <Card sx={{borderRadius:'20px', border:'none', height:'100%'}}>
                 <CardContent>
                         <Typography sx={{fontSize:'18px', fontWeight:'500', color:'#1746A2',}}>Incident Statistics</Typography>
-                        <Box marginTop='80px' marginLeft='-20px'>
+                        <Box marginTop='80px'>
                         <Typography marginLeft='160px' sx={{fontSize:'18px', fontWeight:'400', color:'#FF731D',display:'flex'}}><Typography style={{fontSize:'18px', fontWeight:'400', color:'#212427'}}>Total Incidents: </Typography>{hospitalData.incidentStatistics.total}</Typography>
                         <Box marginLeft='80px' >
                         <Box display='flex' padding='10px'>
