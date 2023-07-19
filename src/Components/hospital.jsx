@@ -176,6 +176,7 @@ const Hospital = () => {
                         <Box marginTop='80px' >
                         <Typography marginLeft='160px' sx={{fontSize:'18px', fontWeight:'400', color:'#FF731D',display:'flex'}}><Link to='/incidentpage' style={{fontSize:'18px', fontWeight:'400', color:'#212427', textDecoration:'none'}}>Total Incidents: </Link>{hospitalData.incidentStatistics.total}</Typography>
                         <Box marginLeft='80px' >
+                        <Link to='/clearedpage' style={{fontSize:'18px', fontWeight:'400', color:'#212427', textDecoration:'none',}}>
                         <Box display='flex' padding='10px'>
                         <Box
                           sx={{
@@ -196,8 +197,9 @@ const Hospital = () => {
                             }}
                           ></Box>
                         </Box>
-                        <Typography sx={{fontSize:'14px', fontWeight:'500',color:'#212427', marginLeft:'10px', marginTop:'-5px'}}><Link to='/clearedpage' style={{fontSize:'18px', fontWeight:'400', color:'#212427', textDecoration:'none',}}>8 cleared</Link></Typography>
-                        </Box>
+                        <Typography sx={{fontSize:'14px', fontWeight:'500',color:'#212427', marginLeft:'10px', marginTop:'-5px'}}>8 Cleared</Typography>
+                        </Box></Link>
+                        <Link to='/notclearedpage' style={{fontSize:'18px', fontWeight:'400', color:'#212427', textDecoration:'none'}}>
                        <Box display='flex' padding='10px'>
                        <Box
                           sx={{
@@ -217,8 +219,8 @@ const Hospital = () => {
                             }}
                           ></Box>
                         </Box>
-                        <Typography sx={{fontSize:'14px', fontWeight:'500',color:'#212427',marginLeft:'10px',marginTop:'-5px'}}><Link to='/notclearedpage' style={{fontSize:'18px', fontWeight:'400', color:'#212427', textDecoration:'none'}}>2 Not cleared</Link></Typography>
-                       </Box>
+                        <Typography sx={{fontSize:'14px', fontWeight:'500',color:'#212427',marginLeft:'10px',marginTop:'-5px'}}>2 Not Cleared</Typography>
+                       </Box></Link>
                         </Box>
                         </Box>
                        </CardContent>
