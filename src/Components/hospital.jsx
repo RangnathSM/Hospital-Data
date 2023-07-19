@@ -602,7 +602,7 @@ const Hospital = () => {
                 <CardContent>
                         <Typography sx={{fontSize:'18px', fontWeight:'500', color:'#1746A2',}}>Incident Statistics</Typography>
                         <Box marginTop='80px' >
-                        <Typography marginLeft='160px' sx={{fontSize:'18px', fontWeight:'400', color:'#FF731D',display:'flex'}}><Link to='/incidentpage' style={{fontSize:'18px', fontWeight:'400', color:'#212427', textDecoration:'none'}}>Total Incidents: </Link>{totalIncidents}</Typography>
+                        <Link to='/incidentpage' style={{fontSize:'18px', fontWeight:'400', color:'#212427', textDecoration:'none'}}><Typography marginLeft='160px' sx={{fontSize:'18px', fontWeight:'400', color:'#FF731D',display:'flex'}}><Typography sx={{fontSize:'18px', fontWeight:'400', color:'#212427', textDecoration:'none'}}>Total Incidents:</Typography> {totalIncidents}</Typography></Link>
                         <Box marginLeft='80px' >
                         <Link to='/clearedpage' style={{fontSize:'18px', fontWeight:'400', color:'#212427', textDecoration:'none',}}>
                         <Box display='flex' padding='10px'>
