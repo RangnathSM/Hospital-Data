@@ -297,7 +297,7 @@ const Incident = () => {
                     </Box>
                     </Box>
                     <Box color={request.Status === 'Cleared' ? '#00A884' : '#FF4B4B'} sx={{border: '1px solid ', borderRadius:'18px',width:'115px',height:'36px', marginLeft:'280px'}}>
-                    <Typography align='center' sx={{fontSize:'16px', fontWeight:'500',  height:'36px',width:'110px', padding:'2px', }} ><Link href={request.Status === 'Cleared' ? '/clearedpage' : '/notclearedpage' } color={request.Status === 'Cleared' ? '#00A884' : '#FF4B4B'} sx={{textDecoration:'none'}}>{request.Status}</Link></Typography>
+                    <Link href={request.Status === 'Cleared' ? '/clearedpage' : '/notclearedpage' } color={request.Status === 'Cleared' ? '#00A884' : '#FF4B4B'} sx={{textDecoration:'none'}}><Typography align='center' sx={{fontSize:'16px', fontWeight:'500',  height:'36px',width:'110px', padding:'2px', }} >{request.Status}</Typography></Link>
                     </Box>
                     </CardContent>
                 </Card>
