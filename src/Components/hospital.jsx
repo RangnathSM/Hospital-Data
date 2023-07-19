@@ -570,7 +570,7 @@ const Hospital = () => {
                         : '#E56D82', fontWeight: '600', fontSize:'14px', }}
                       >{`${calibration.percentage}\\100`}
                       </Typography>
-                  <Typography sx={{fontSize:'14px', fontWeight:'400', color:'#212427',marginTop:'-1.5px', marginLeft:'10px'}}>{calibration.task}</Typography>
+                  <Typography sx={{fontSize:'14px', fontWeight:'400', color:'#212427',marginTop:'-1.5px', marginLeft:'10px', width:'200px'}}>{calibration.task}</Typography>
                  </Box>
                 </Box>
                 </Box>
@@ -647,7 +647,7 @@ const Hospital = () => {
                             }}
                           ></Box>
                         </Box>
-                        <Typography sx={{fontSize:'14px', fontWeight:'500',color:'#212427',marginLeft:'10px'}}>{totalNotCleared} Not Cleared</Typography>
+                        <Typography sx={{fontSize:'14px', fontWeight:'500',color:'#212427',marginLeft:'10px', }}>{totalNotCleared} Not Cleared</Typography>
                        </Box></Link>
                         </Box>
                         </Box>
