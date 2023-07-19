@@ -26,17 +26,445 @@ const Hospital = () => {
           { task: 'Not Calibrated', percentage: 20,},
           { task: 'Not Required', percentage: 10 ,},
         ],
-        incidentStatistics: {
-          total: 10,
-          cleared: 80,
-          notCleared: 20,
+       incidentsList : [
+          {
+              Asset:'Defibrilators', 
+              Dept:'ICU',
+              Date: '2023/07/01',
+              Time:'17:44:16',
+              Status:'Cleared'
+          },
+          {
+              Asset:'ECG Monitor', 
+              Dept:'ECG',
+              Date: '2023/07/01',
+              Time:'17:44:16',
+              Status:'Not Cleared'
+          },
+          {
+              Asset:'Defibrilators', 
+              Dept:'Radiology',
+              Date: '2023/06/02',
+              Time:'17:44:16',
+              Status:'Not Cleared'
+          },
+          {
+              Asset:'ECG Monitor', 
+              Dept:'ICU',
+              Date: '2023/06/01',
+              Time:'17:44:16',
+              Status:'Cleared'
+          },
+          {
+              Asset:'Defibrilators', 
+              Dept:'ICU',
+              Date: '2023/05/01',
+              Time:'17:44:16',
+              Status:'Not Cleared'
+          },
+          {
+              Asset:'ECG Monitor', 
+              Dept:'ECG',
+              Date: '2023/05/02',
+              Time:'17:44:16',
+              Status:'Cleared'
+          },
+          {
+              Asset:'Defibrilators', 
+              Dept:'Radiology',
+              Date: '2023/04/01',
+              Time:'17:44:16',
+              Status:'Not Cleared'
+          },
+          {
+              Asset:'ECG Monitor', 
+              Dept:'ICU',
+              Date: '2023/04/02',
+              Time:'17:44:16',
+              Status:'Cleared'
+          },
+          {
+              Asset:'ECG Monitor', 
+              Dept:'ECG',
+              Date: '2023/07/01',
+              Time:'17:44:16',
+              Status:'Not Cleared'
+          },
+          {
+              Asset:'Defibrilators', 
+              Dept:'Radiology',
+              Date: '2023/06/02',
+              Time:'17:44:16',
+              Status:'Not Cleared'
+          },
+          {
+              Asset:'ECG Monitor', 
+              Dept:'ICU',
+              Date: '2023/06/01',
+              Time:'17:44:16',
+              Status:'Cleared'
+          },
+          {
+              Asset:'Defibrilators', 
+              Dept:'ICU',
+              Date: '2023/05/01',
+              Time:'17:44:16',
+              Status:'Not Cleared'
+          },
+          {
+              Asset:'ECG Monitor', 
+              Dept:'ECG',
+              Date: '2023/05/02',
+              Time:'17:44:16',
+              Status:'Cleared'
+          }, {
+              Asset:'Defibrilators', 
+              Dept:'ICU',
+              Date: '2023/07/01',
+              Time:'17:44:16',
+              Status:'Cleared'
+          },
+          {
+              Asset:'ECG Monitor', 
+              Dept:'ECG',
+              Date: '2023/07/01',
+              Time:'17:44:16',
+              Status:'Not Cleared'
+          },
+          {
+              Asset:'Defibrilators', 
+              Dept:'Radiology',
+              Date: '2023/06/02',
+              Time:'17:44:16',
+              Status:'Not Cleared'
+          },
+          {
+              Asset:'ECG Monitor', 
+              Dept:'ICU',
+              Date: '2023/06/01',
+              Time:'17:44:16',
+              Status:'Cleared'
+          },
+          {
+              Asset:'Defibrilators', 
+              Dept:'ICU',
+              Date: '2023/05/01',
+              Time:'17:44:16',
+              Status:'Not Cleared'
+          },
+          {
+            Asset:'Defibrilators', 
+            Dept:'ICU',
+            Date: '2023/07/01',
+            Time:'17:44:16',
+            Status:'Cleared'
+          },
+          {
+            Asset:'ECG Monitor', 
+            Dept:'ICU',
+            Date: '2023/06/01',
+            Time:'17:44:16',
+            Status:'Cleared'
         },
+        {
+          Asset:'Defibrilators', 
+          Dept:'ICU',
+          Date: '2023/07/01',
+          Time:'17:44:16',
+          Status:'Cleared'
+        },
+        {
+          Asset:'ECG Monitor', 
+          Dept:'ICU',
+          Date: '2023/06/01',
+          Time:'17:44:16',
+          Status:'Cleared'
+      },
+      {
+        Asset:'Defibrilators', 
+        Dept:'ICU',
+        Date: '2023/07/01',
+        Time:'17:44:16',
+        Status:'Cleared'
+      },
+      {
+        Asset:'ECG Monitor', 
+        Dept:'ICU',
+        Date: '2023/06/01',
+        Time:'17:44:16',
+        Status:'Cleared'
+    },
+    {
+      Asset:'Defibrilators', 
+      Dept:'ICU',
+      Date: '2023/07/01',
+      Time:'17:44:16',
+      Status:'Cleared'
+    },
+    {
+      Asset:'ECG Monitor', 
+      Dept:'ICU',
+      Date: '2023/06/01',
+      Time:'17:44:16',
+      Status:'Cleared'
+  },
+  {
+    Asset:'Defibrilators', 
+    Dept:'ICU',
+    Date: '2023/07/01',
+    Time:'17:44:16',
+    Status:'Cleared'
+  },
+  {
+    Asset:'ECG Monitor', 
+    Dept:'ICU',
+    Date: '2023/06/01',
+    Time:'17:44:16',
+    Status:'Cleared'
+},
+{
+  Asset:'Defibrilators', 
+  Dept:'ICU',
+  Date: '2023/07/01',
+  Time:'17:44:16',
+  Status:'Cleared'
+},
+{
+  Asset:'ECG Monitor', 
+  Dept:'ICU',
+  Date: '2023/06/01',
+  Time:'17:44:16',
+  Status:'Cleared'
+},
+{
+  Asset:'Defibrilators', 
+  Dept:'ICU',
+  Date: '2023/07/01',
+  Time:'17:44:16',
+  Status:'Cleared'
+},
+{
+  Asset:'ECG Monitor', 
+  Dept:'ICU',
+  Date: '2023/06/01',
+  Time:'17:44:16',
+  Status:'Cleared'
+},
+{
+  Asset:'Defibrilators', 
+  Dept:'ICU',
+  Date: '2023/07/01',
+  Time:'17:44:16',
+  Status:'Cleared'
+},
+{
+  Asset:'ECG Monitor', 
+  Dept:'ICU',
+  Date: '2023/06/01',
+  Time:'17:44:16',
+  Status:'Cleared'
+},
+{
+  Asset:'Defibrilators', 
+  Dept:'ICU',
+  Date: '2023/07/01',
+  Time:'17:44:16',
+  Status:'Cleared'
+},
+{
+  Asset:'ECG Monitor', 
+  Dept:'ICU',
+  Date: '2023/06/01',
+  Time:'17:44:16',
+  Status:'Cleared'
+},
+{
+  Asset:'Defibrilators', 
+  Dept:'ICU',
+  Date: '2023/07/01',
+  Time:'17:44:16',
+  Status:'Cleared'
+},
+{
+  Asset:'ECG Monitor', 
+  Dept:'ICU',
+  Date: '2023/06/01',
+  Time:'17:44:16',
+  Status:'Cleared'
+},
+{
+  Asset:'Defibrilators', 
+  Dept:'ICU',
+  Date: '2023/07/01',
+  Time:'17:44:16',
+  Status:'Cleared'
+},
+{
+  Asset:'ECG Monitor', 
+  Dept:'ICU',
+  Date: '2023/06/01',
+  Time:'17:44:16',
+  Status:'Cleared'
+},
+{
+  Asset:'Defibrilators', 
+  Dept:'ICU',
+  Date: '2023/07/01',
+  Time:'17:44:16',
+  Status:'Cleared'
+},
+{
+  Asset:'ECG Monitor', 
+  Dept:'ICU',
+  Date: '2023/06/01',
+  Time:'17:44:16',
+  Status:'Cleared'
+},
+{
+  Asset:'Defibrilators', 
+  Dept:'ICU',
+  Date: '2023/07/01',
+  Time:'17:44:16',
+  Status:'Cleared'
+},
+{
+  Asset:'ECG Monitor', 
+  Dept:'ICU',
+  Date: '2023/06/01',
+  Time:'17:44:16',
+  Status:'Cleared'
+},
+{
+  Asset:'Defibrilators', 
+  Dept:'ICU',
+  Date: '2023/07/01',
+  Time:'17:44:16',
+  Status:'Cleared'
+},
+{
+  Asset:'ECG Monitor', 
+  Dept:'ICU',
+  Date: '2023/06/01',
+  Time:'17:44:16',
+  Status:'Cleared'
+},
+{
+  Asset:'Defibrilators', 
+  Dept:'ICU',
+  Date: '2023/07/01',
+  Time:'17:44:16',
+  Status:'Cleared'
+},
+{
+  Asset:'ECG Monitor', 
+  Dept:'ICU',
+  Date: '2023/06/01',
+  Time:'17:44:16',
+  Status:'Cleared'
+},
+{
+  Asset:'Defibrilators', 
+  Dept:'ICU',
+  Date: '2023/07/01',
+  Time:'17:44:16',
+  Status:'Cleared'
+},
+{
+  Asset:'ECG Monitor', 
+  Dept:'ICU',
+  Date: '2023/06/01',
+  Time:'17:44:16',
+  Status:'Cleared'
+},
+{
+  Asset:'Defibrilators', 
+  Dept:'ICU',
+  Date: '2023/07/01',
+  Time:'17:44:16',
+  Status:'Cleared'
+},
+{
+  Asset:'ECG Monitor', 
+  Dept:'ICU',
+  Date: '2023/06/01',
+  Time:'17:44:16',
+  Status:'Cleared'
+},
+{
+  Asset:'Defibrilators', 
+  Dept:'ICU',
+  Date: '2023/07/01',
+  Time:'17:44:16',
+  Status:'Cleared'
+},
+{
+  Asset:'ECG Monitor', 
+  Dept:'ICU',
+  Date: '2023/06/01',
+  Time:'17:44:16',
+  Status:'Cleared'
+},
+{
+  Asset:'Defibrilators', 
+  Dept:'ICU',
+  Date: '2023/07/01',
+  Time:'17:44:16',
+  Status:'Cleared'
+},
+{
+  Asset:'ECG Monitor', 
+  Dept:'ICU',
+  Date: '2023/06/01',
+  Time:'17:44:16',
+  Status:'Cleared'
+},
+{
+  Asset:'Defibrilators', 
+  Dept:'ICU',
+  Date: '2023/07/01',
+  Time:'17:44:16',
+  Status:'Cleared'
+},
+{
+  Asset:'ECG Monitor', 
+  Dept:'ICU',
+  Date: '2023/06/01',
+  Time:'17:44:16',
+  Status:'Cleared'
+},{
+  Asset:'Defibrilators', 
+  Dept:'ICU',
+  Date: '2023/07/01',
+  Time:'17:44:16',
+  Status:'Cleared'
+},
+{
+  Asset:'ECG Monitor', 
+  Dept:'ICU',
+  Date: '2023/06/01',
+  Time:'17:44:16',
+  Status:'Cleared'
+},
+        
+        ]
       };
       
       const departmentsData = [
         ['Department', 'Percentage'],
         ...hospitalData.departments.map((department) => [department.name, department.percentage]),
       ];
+      
+      const totalIncidents = hospitalData.incidentsList.length;
+
+      const clearedIncidents = hospitalData.incidentsList.filter(
+        (incident) => incident.Status === 'Cleared'
+      );
+      const totalCleared = clearedIncidents.length;
+    
+      const notClearedIncidents = hospitalData.incidentsList.filter(
+        (incident) => incident.Status === 'Not Cleared'
+      );
+      const totalNotCleared = notClearedIncidents.length;
 
     return ( 
         <Box  display='flex' maxWidth='100%' maxHeight='100%' sx={{background:'#FAF5EE',}}>
@@ -174,7 +602,7 @@ const Hospital = () => {
                 <CardContent>
                         <Typography sx={{fontSize:'18px', fontWeight:'500', color:'#1746A2',}}>Incident Statistics</Typography>
                         <Box marginTop='80px' >
-                        <Typography marginLeft='160px' sx={{fontSize:'18px', fontWeight:'400', color:'#FF731D',display:'flex'}}><Link to='/incidentpage' style={{fontSize:'18px', fontWeight:'400', color:'#212427', textDecoration:'none'}}>Total Incidents: </Link>{hospitalData.incidentStatistics.total}</Typography>
+                        <Typography marginLeft='160px' sx={{fontSize:'18px', fontWeight:'400', color:'#FF731D',display:'flex'}}><Link to='/incidentpage' style={{fontSize:'18px', fontWeight:'400', color:'#212427', textDecoration:'none'}}>Total Incidents: </Link>{totalIncidents}</Typography>
                         <Box marginLeft='80px' >
                         <Link to='/clearedpage' style={{fontSize:'18px', fontWeight:'400', color:'#212427', textDecoration:'none',}}>
                         <Box display='flex' padding='10px'>
@@ -191,13 +619,13 @@ const Hospital = () => {
                           <Box
                             sx={{
                               height: '100%',
-                              width: `${hospitalData.incidentStatistics.cleared}%`,
+                              width: `${totalCleared}%`,
                               backgroundColor: '#61CEAA',
                               borderRadius: '25px',
                             }}
                           ></Box>
                         </Box>
-                        <Typography sx={{fontSize:'14px', fontWeight:'500',color:'#212427', marginLeft:'10px', marginTop:'-5px'}}>8 Cleared</Typography>
+                        <Typography sx={{fontSize:'14px', fontWeight:'500',color:'#212427', marginLeft:'10px',}}>{totalCleared} Cleared</Typography>
                         </Box></Link>
                         <Link to='/notclearedpage' style={{fontSize:'18px', fontWeight:'400', color:'#212427', textDecoration:'none'}}>
                        <Box display='flex' padding='10px'>
@@ -213,13 +641,13 @@ const Hospital = () => {
                           <Box                
                             sx={{
                               height: '100%',
-                              width: `${hospitalData.incidentStatistics.notCleared}%`,
+                              width: `${totalNotCleared}%`,
                               backgroundColor: '#E56D82',
                               borderRadius: '25px',
                             }}
                           ></Box>
                         </Box>
-                        <Typography sx={{fontSize:'14px', fontWeight:'500',color:'#212427',marginLeft:'10px',marginTop:'-5px'}}>2 Not Cleared</Typography>
+                        <Typography sx={{fontSize:'14px', fontWeight:'500',color:'#212427',marginLeft:'10px'}}>{totalNotCleared} Not Cleared</Typography>
                        </Box></Link>
                         </Box>
                         </Box>
