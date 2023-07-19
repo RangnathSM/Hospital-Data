@@ -2,6 +2,7 @@ import { Card,CardContent, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import { Grid} from '@mui/material';
 import { Chart } from "react-google-charts";
+import {Link} from 'react-router-dom'
 import '../Styles/hospital.css'
 
 const Hospital = () => {
@@ -173,7 +174,7 @@ const Hospital = () => {
                 <CardContent>
                         <Typography sx={{fontSize:'18px', fontWeight:'500', color:'#1746A2',}}>Incident Statistics</Typography>
                         <Box marginTop='80px' >
-                        <Typography marginLeft='160px' sx={{fontSize:'18px', fontWeight:'400', color:'#FF731D',display:'flex'}}><Typography style={{fontSize:'18px', fontWeight:'400', color:'#212427'}}>Total Incidents: </Typography>{hospitalData.incidentStatistics.total}</Typography>
+                        <Typography marginLeft='160px' sx={{fontSize:'18px', fontWeight:'400', color:'#FF731D',display:'flex'}}><Link to='/incidentpage' style={{fontSize:'18px', fontWeight:'400', color:'#212427', textDecoration:'none'}}>Total Incidents: </Link>{hospitalData.incidentStatistics.total}</Typography>
                         <Box marginLeft='80px' >
                         <Box display='flex' padding='10px'>
                         <Box
@@ -195,7 +196,7 @@ const Hospital = () => {
                             }}
                           ></Box>
                         </Box>
-                        <Typography sx={{fontSize:'14px', fontWeight:'500',color:'#212427', marginLeft:'10px'}}>8 cleared</Typography>
+                        <Typography sx={{fontSize:'14px', fontWeight:'500',color:'#212427', marginLeft:'10px', marginTop:'-5px'}}><Link to='/clearedpage' style={{fontSize:'18px', fontWeight:'400', color:'#212427', textDecoration:'none',}}>8 cleared</Link></Typography>
                         </Box>
                        <Box display='flex' padding='10px'>
                        <Box
@@ -216,7 +217,7 @@ const Hospital = () => {
                             }}
                           ></Box>
                         </Box>
-                        <Typography sx={{fontSize:'14px', fontWeight:'500',color:'#212427',marginLeft:'10px'}}>2 cleared</Typography>
+                        <Typography sx={{fontSize:'14px', fontWeight:'500',color:'#212427',marginLeft:'10px',marginTop:'-5px'}}><Link to='/notclearedpage' style={{fontSize:'18px', fontWeight:'400', color:'#212427', textDecoration:'none'}}>2 Not cleared</Link></Typography>
                        </Box>
                         </Box>
                         </Box>
