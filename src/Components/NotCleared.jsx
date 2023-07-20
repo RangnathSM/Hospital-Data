@@ -1,6 +1,6 @@
 import { Box } from "@mui/system";
 import React, { useState } from 'react';
-import {  Typography, Card, CardContent, Grid,  TextField } from '@mui/material'
+import {  Typography, Card, CardContent, Grid,  TextField, Link } from '@mui/material'
 import InputAdornment from '@mui/material/InputAdornment';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search'
@@ -12,127 +12,96 @@ const NotCleared = () => {
       };
 
     
-    const incidentsList = [
+      const incidentsList = [
         {
-            Asset:'Defibrilators', 
+            id:1,
+            Head:'Defibrilators', 
             Dept:'ICU',
             Date: '2023/07/01',
             Time:'17:44:16',
             Status:'Cleared'
         },
         {
-            Asset:'ECG Monitor', 
+            id:2,
+            Head:'ECG Monitor', 
             Dept:'ECG',
             Date: '2023/07/01',
             Time:'17:44:16',
             Status:'Not Cleared'
         },
         {
-            Asset:'Defibrilators', 
+            id:3,
+            Head:'Defibrilators', 
             Dept:'Radiology',
             Date: '2023/06/02',
             Time:'17:44:16',
             Status:'Not Cleared'
         },
         {
-            Asset:'ECG Monitor', 
+            id:4,
+            Head:'ECG Monitor', 
             Dept:'ICU',
             Date: '2023/06/01',
             Time:'17:44:16',
             Status:'Cleared'
         },
-        {
-            Asset:'Defibrilators', 
+        {   id:5,
+            Head:'Defibrilators', 
             Dept:'ICU',
             Date: '2023/05/01',
             Time:'17:44:16',
             Status:'Not Cleared'
         },
-        {
-            Asset:'ECG Monitor', 
+        {   id:6,
+            Head:'ECG Monitor', 
             Dept:'ECG',
             Date: '2023/05/02',
             Time:'17:44:16',
             Status:'Cleared'
         },
         {
-            Asset:'Defibrilators', 
+            id:7,
+            Head:'Radiology Monitor', 
             Dept:'Radiology',
             Date: '2023/04/01',
             Time:'17:44:16',
             Status:'Not Cleared'
         },
-        {
-            Asset:'ECG Monitor', 
+        {    
+            id:8,
+            Head:'ECG Monitor', 
             Dept:'ICU',
             Date: '2023/04/02',
             Time:'17:44:16',
             Status:'Cleared'
         },
-        {
-            Asset:'ECG Monitor', 
+        {   
+            id:9,
+            Head:'ECG Monitor', 
             Dept:'ECG',
             Date: '2023/07/01',
             Time:'17:44:16',
             Status:'Not Cleared'
         },
-        {
-            Asset:'Defibrilators', 
+        {   
+            id:10,
+            Head:'Defibrilators', 
             Dept:'Radiology',
             Date: '2023/06/02',
             Time:'17:44:16',
             Status:'Not Cleared'
         },
-        {
-            Asset:'ECG Monitor', 
+        {   
+            id:11,
+            Head:'ECG Monitor', 
             Dept:'ICU',
             Date: '2023/06/01',
             Time:'17:44:16',
             Status:'Cleared'
         },
-        {
-            Asset:'Defibrilators', 
-            Dept:'ICU',
-            Date: '2023/05/01',
-            Time:'17:44:16',
-            Status:'Not Cleared'
-        },
-        {
-            Asset:'ECG Monitor', 
-            Dept:'ECG',
-            Date: '2023/05/02',
-            Time:'17:44:16',
-            Status:'Cleared'
-        }, {
-            Asset:'Defibrilators', 
-            Dept:'ICU',
-            Date: '2023/07/01',
-            Time:'17:44:16',
-            Status:'Cleared'
-        },
-        {
-            Asset:'ECG Monitor', 
-            Dept:'ECG',
-            Date: '2023/07/01',
-            Time:'17:44:16',
-            Status:'Not Cleared'
-        },
-        {
-            Asset:'Defibrilators', 
-            Dept:'Radiology',
-            Date: '2023/06/02',
-            Time:'17:44:16',
-            Status:'Not Cleared'
-        },
-        {
-            Asset:'ECG Monitor', 
-            Dept:'ICU',
-            Date: '2023/06/01',
-            Time:'17:44:16',
-            Status:'Cleared'
-        },
-        {
-            Asset:'Defibrilators', 
+        {    
+            id:12,
+            Head:'Defibrilators', 
             Dept:'ICU',
             Date: '2023/05/01',
             Time:'17:44:16',
@@ -143,7 +112,7 @@ const NotCleared = () => {
       const clearedIncidents = incidentsList.filter(
         (incident) =>
           incident.Status === 'Not Cleared' &&
-          incident.Asset.toLowerCase().includes(searchQuery.toLowerCase())
+          incident.Head.toLowerCase().includes(searchQuery.toLowerCase())
       );
       
 
@@ -161,11 +130,11 @@ const NotCleared = () => {
 
            <Box maxWidth={{xl:'1030px', lg:'1030px', md:'900px', sm:'600px', xs:'480px'}} minHeight='937px' sx={{boxShadow : "0px 0px 4px 0px #00000033", border: "0px solid #1746A280", borderRadius:'15px', background:'white', marginTop:{xl:'20px', lg:'20px', md:'20px', sm:'20px', xs:'20px'}, marginLeft:{xl:'0px', lg:'0px', md:'0px'}}}>
            {clearedIncidents.map((request, index) => ( 
-             <Box width='440px' height='257px' display='inline-block' paddingX='20px' paddingY='20px' marginLeft={{xl:'15px'}}>
+             <Link href={request.Status === 'Cleared' ? `/detailscleared/${request.Head}` : `/detailsnotcleared/${request.Head}` } color={request.Status === 'Cleared' ? '#00A884' : '#FF4B4B'} sx={{textDecoration:'none'}}><Box width='440px' height='257px' display='inline-block' paddingX='20px' paddingY='20px' marginLeft={{xl:'15px'}}>
                <Grid>
                <Card sx={{width:{xl:'455px', lg:'455px', md:'480px', sm:'455px', xs:'455px'}, height:'257px' ,border:'1px solid #1746A280', boxShadow:'0px 0px 4px 0px #00000033', borderRadius:'30px',marginLeft:{xl:'0px', lg:'0px', md:'180px', sm:'50px', xs:'-8px'}}} key={index}>
                    <CardContent>
-                   <Typography sx={{fontSize:'24px', fontWeight:'500', color:'#000000',padding:'10PX'}}>{request.Asset}</Typography>
+                   <Typography sx={{fontSize:'24px', fontWeight:'500', color:'#000000',padding:'10PX'}}>{request.Head}</Typography>
                    <Box>
                    <Box display='flex' padding='8PX'>
                    <Typography sx={{fontSize:'20px', fontWeight:'400', color:'#1746A2'}}>Department</Typography>
@@ -189,7 +158,7 @@ const NotCleared = () => {
                    </CardContent>
                </Card>
                </Grid>
-             </Box>
+             </Box></Link>
            ))}
            </Box>
            </Box>

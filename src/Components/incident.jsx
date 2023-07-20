@@ -69,125 +69,94 @@ const Incident = () => {
       
       const incidentsList = [
         {
-            Asset:'Defibrilators', 
+            id:1,
+            Head:'Defibrilators', 
             Dept:'ICU',
             Date: '2023/07/01',
             Time:'17:44:16',
             Status:'Cleared'
         },
         {
-            Asset:'ECG Monitor', 
+            id:2,
+            Head:'ECG Monitor', 
             Dept:'ECG',
             Date: '2023/07/01',
             Time:'17:44:16',
             Status:'Not Cleared'
         },
         {
-            Asset:'Defibrilators', 
+            id:3,
+            Head:'Defibrilators', 
             Dept:'Radiology',
             Date: '2023/06/02',
             Time:'17:44:16',
             Status:'Not Cleared'
         },
         {
-            Asset:'ECG Monitor', 
+            id:4,
+            Head:'ECG Monitor', 
             Dept:'ICU',
             Date: '2023/06/01',
             Time:'17:44:16',
             Status:'Cleared'
         },
-        {
-            Asset:'Defibrilators', 
+        {   id:5,
+            Head:'Radiology Monitor', 
             Dept:'ICU',
             Date: '2023/05/01',
             Time:'17:44:16',
             Status:'Not Cleared'
         },
-        {
-            Asset:'ECG Monitor', 
+        {   id:6,
+            Head:'Radiology Monitor', 
             Dept:'ECG',
             Date: '2023/05/02',
             Time:'17:44:16',
             Status:'Cleared'
         },
         {
-            Asset:'Defibrilators', 
+            id:7,
+            Head:'Defibrilators', 
             Dept:'Radiology',
             Date: '2023/04/01',
             Time:'17:44:16',
             Status:'Not Cleared'
         },
-        {
-            Asset:'ECG Monitor', 
+        {    
+            id:8,
+            Head:'Defibrilators', 
             Dept:'ICU',
             Date: '2023/04/02',
             Time:'17:44:16',
             Status:'Cleared'
         },
-        {
-            Asset:'ECG Monitor', 
+        {   
+            id:9,
+            Head:'ECG Monitor', 
             Dept:'ECG',
             Date: '2023/07/01',
             Time:'17:44:16',
             Status:'Not Cleared'
         },
-        {
-            Asset:'Defibrilators', 
+        {   
+            id:10,
+            Head:'Defibrilators', 
             Dept:'Radiology',
             Date: '2023/06/02',
             Time:'17:44:16',
             Status:'Not Cleared'
         },
-        {
-            Asset:'ECG Monitor', 
+        {   
+            id:11,
+            Head:'ICU Monitor', 
             Dept:'ICU',
             Date: '2023/06/01',
             Time:'17:44:16',
             Status:'Cleared'
         },
-        {
-            Asset:'Defibrilators', 
-            Dept:'ICU',
-            Date: '2023/05/01',
-            Time:'17:44:16',
-            Status:'Not Cleared'
-        },
-        {
-            Asset:'ECG Monitor', 
-            Dept:'ECG',
-            Date: '2023/05/02',
-            Time:'17:44:16',
-            Status:'Cleared'
-        }, {
-            Asset:'Defibrilators', 
-            Dept:'ICU',
-            Date: '2023/07/01',
-            Time:'17:44:16',
-            Status:'Cleared'
-        },
-        {
-            Asset:'ECG Monitor', 
-            Dept:'ECG',
-            Date: '2023/07/01',
-            Time:'17:44:16',
-            Status:'Not Cleared'
-        },
-        {
-            Asset:'Defibrilators', 
-            Dept:'Radiology',
-            Date: '2023/06/02',
-            Time:'17:44:16',
-            Status:'Not Cleared'
-        },
-        {
-            Asset:'ECG Monitor', 
-            Dept:'ICU',
-            Date: '2023/06/01',
-            Time:'17:44:16',
-            Status:'Cleared'
-        },
-        {
-            Asset:'Defibrilators', 
+        {    
+            id:12,
+            Head:'Defibrilators', 
             Dept:'ICU',
             Date: '2023/05/01',
             Time:'17:44:16',
@@ -213,7 +182,7 @@ const Incident = () => {
     };
    
     const filteredIncidents = getIncidents().filter((request) =>
-    request.Asset.toLowerCase().includes(searchQuery.toLowerCase())
+    request.Head.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
     return ( 
@@ -274,11 +243,11 @@ const Incident = () => {
 
             <Box maxWidth={{xl:'1030px', lg:'1030px', md:'900px', sm:'600px', xs:'480px'}} minHeight='937px' sx={{boxShadow : "0px 0px 4px 0px #00000033", border: "0px solid #1746A280", borderRadius:'15px', background:'white', marginTop:{xl:'20px', lg:'20px', md:'20px', sm:'20px', xs:'20px'}, marginLeft:{xl:'0px', lg:'0px', md:'0px'}}}>
             {filteredIncidents.map((request, index) => ( 
-              <Box width='470px' height='257px' display='inline-block' paddingX='20px' paddingY='20px'>
+              <Link href={request.Status === 'Cleared' ? `/detailscleared/${request.Head}` : `/detailsnotcleared/${request.Head}` } color={request.Status === 'Cleared' ? '#00A884' : '#FF4B4B'} sx={{textDecoration:'none'}}><Box width='470px' height='257px' display='inline-block' paddingX='20px' paddingY='20px'>
                 <Grid>
                 <Card sx={{width:{xl:'455px', lg:'455px', md:'480px', sm:'455px', xs:'455px'}, height:'257px' ,border:'1px solid #1746A280', boxShadow:'0px 0px 4px 0px #00000033', borderRadius:'30px', marginLeft:{xl:'0px', lg:'0px', md:'180px', sm:'50px', xs:'-8px'}}} key={index}>
                     <CardContent>
-                    <Typography sx={{fontSize:'24px', fontWeight:'500', color:'#000000',padding:'10PX'}}>{request.Asset}</Typography>
+                    <Typography sx={{fontSize:'24px', fontWeight:'500', color:'#000000',padding:'10PX'}}>{request.Head}</Typography>
                     <Box>
                     <Box display='flex' padding='8PX'>
                     <Typography sx={{fontSize:'20px', fontWeight:'400', color:'#1746A2'}}>Department</Typography>
@@ -297,12 +266,12 @@ const Incident = () => {
                     </Box>
                     </Box>
                     <Box color={request.Status === 'Cleared' ? '#00A884' : '#FF4B4B'} sx={{border: '1px solid ', borderRadius:'18px',width:'115px',height:'36px', marginLeft:'280px'}}>
-                    <Link href={request.Status === 'Cleared' ? '/clearedpage' : '/notclearedpage' } color={request.Status === 'Cleared' ? '#00A884' : '#FF4B4B'} sx={{textDecoration:'none'}}><Typography align='center' sx={{fontSize:'16px', fontWeight:'500',  height:'36px',width:'110px', padding:'2px', }} >{request.Status}</Typography></Link>
+                    <Link href={request.Status === 'Cleared' ? `/detailscleared/${request.Head}` : `/detailsnotcleared/${request.Head}` } color={request.Status === 'Cleared' ? '#00A884' : '#FF4B4B'} sx={{textDecoration:'none'}}><Typography align='center' sx={{fontSize:'16px', fontWeight:'500',  height:'36px',width:'110px', padding:'2px', }} >{request.Status}</Typography></Link>
                     </Box>
                     </CardContent>
                 </Card>
                 </Grid>
-              </Box>
+              </Box></Link>
             ))}
             </Box>
             </Box>

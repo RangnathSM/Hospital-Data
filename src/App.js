@@ -5,6 +5,8 @@ import Hospital from './Components/hospital';
 import Incident from './Components/incident';
 import Cleared from './Components/Cleared';
 import NotCleared from './Components/NotCleared';
+import DetailsCleared from './Components/DetailsCleared';
+import DetailsNotCleared from './Components/DetailsNotCleared';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
         <Route path='/incidentpage' element={<Incident/>} />
         <Route path='/clearedpage' element={<Cleared/>}/>
         <Route path='/notclearedpage' element={<NotCleared/>}/>
+        <Route path='/detailscleared/:Head' element={<DetailsCleared/>}/>
+        <Route path='/detailsnotcleared/:Head' element={<DetailsNotCleared/>} />
       </Routes>
     </Box>
   );
