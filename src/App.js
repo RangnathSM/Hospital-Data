@@ -7,6 +7,9 @@ import Cleared from './Components/Cleared';
 import NotCleared from './Components/NotCleared';
 import DetailsCleared from './Components/DetailsCleared';
 import DetailsNotCleared from './Components/DetailsNotCleared';
+import Departments from './Components/Departments';
+import Calibrated from './Components/Calibrated';
+import NotCalibrated from './Components/NotCalibrated';
 
 function App() {
   return (
@@ -18,6 +21,9 @@ function App() {
         <Route path='/notclearedpage' element={<NotCleared/>}/>
         <Route path='/detailscleared/:Head' element={<DetailsCleared/>}/>
         <Route path='/detailsnotcleared/:Head' element={<DetailsNotCleared/>} />
+        <Route path='/departments' element={<Departments/>} />
+        <Route path='/calibratedpage' element={<Calibrated/>} />
+        <Route path='/notcalibratedpage' element={<NotCalibrated/>} />
       </Routes>
     </Box>
   );

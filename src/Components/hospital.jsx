@@ -501,7 +501,7 @@ const Hospital = () => {
 
             <Box  width={{xl:'688px', lg:'630px', md:'688px', sm:'550px', xs:'460px'}} height='400px' >
             <Grid  height='400px' sx={{background:'white'}} marginTop='20px' borderRadius='20px' border= '1px solid #F7811740' boxShadow='0px 0px 4px 0px #0000001F'>
-            <Card sx={{borderRadius:'20px', border:'none', height:'100%',width:{xl:'688px', lg:'630px', md:'688px', sm:'550px', xs:'460px'}}}>
+            <Link to='/departments' style={{textDecoration:'none'}}><Card sx={{borderRadius:'20px', border:'none', height:'100%',width:{xl:'688px', lg:'630px', md:'688px', sm:'550px', xs:'460px'}}}>
               <CardContent>
                     <Typography sx={{fontSize:'18px', fontWeight:'500', color:'#1746A2',marginLeft:'10px', margintop:'20px'}}>Department Asset</Typography>
                     <Chart
@@ -519,7 +519,7 @@ const Hospital = () => {
                         align='left'
                     />
                     </CardContent>
-                    </Card>
+                    </Card></Link>
             </Grid>
             </Box>
             
@@ -530,11 +530,13 @@ const Hospital = () => {
             <Typography sx={{fontSize:'18px', fontWeight:'500', color:'#1746A2'}}>Calibration</Typography>
               {hospitalData.calibration.map((calibration, index) => (
                 <Box key={index}>
-                <Box display='flex' padding='10px'>
+                <Link to={calibration.task === 'Calibrated' ? '/calibratedpage' : calibration.task === 'Not Calibrated' ? '/notcalibratedpage' : '/notrequiredpage'} style={{textDecoration:'none'}} >
+                <Box display='flex' padding='10px' sx={{textDecoration:'none'}}>
                 <Box
                     sx={{
                       height: '14.85px',
                       width:'238px',
+                      textDecoration:'none',
                       backgroundColor:
                         calibration.task === 'Calibrated'
                           ? '#CAE4DC'
@@ -549,6 +551,7 @@ const Hospital = () => {
                       sx={{
                         height: '100%',
                         borderRadius: '3px',
+                        textDecoration:'none',
                         width: `${calibration.percentage}%`,
                         backgroundColor:
                           calibration.task === 'Calibrated'
@@ -560,19 +563,20 @@ const Hospital = () => {
                     ></Box>
                   </Box>
               
-                 <Box display='flex' marginTop='-2px' marginLeft='15px'>
+                 <Box display='flex' marginTop='-2px' marginLeft='15px' textDecoration='none' >
                  <Typography
                         variant="body2"
-                        sx={{ color: calibration.task === 'Calibrated'
+                        sx={{ textDecoration:'none', color: calibration.task === 'Calibrated'
                         ? '#61CEAA'
                         : calibration.task === 'Not Calibrated'
                         ? '#1746A2'
                         : '#E56D82', fontWeight: '600', fontSize:'14px', }}
                       >{`${calibration.percentage}\\100`}
                       </Typography>
-                  <Typography sx={{fontSize:'14px', fontWeight:'400', color:'#212427',marginTop:'-1.5px', marginLeft:'10px', width:'200px'}}>{calibration.task}</Typography>
+                  <Typography sx={{fontSize:'14px', fontWeight:'400', color:'#212427',marginTop:'-1.5px', marginLeft:'10px', width:'200px', textDecoration:'none'}}>{calibration.task}</Typography>
                  </Box>
                 </Box>
+                </Link>
                 </Box>
               ))}
               </CardContent>
