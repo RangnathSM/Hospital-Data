@@ -16,8 +16,7 @@ const NotRequired = () => {
     const [anchorElFilter, setAnchorElFilter] = useState(null);
     const [sortOption, setSortOption] = useState('');
     const [filterDepartments, setFilterDepartments] = useState([]);
-    const [filterIncident, setFilterIncident] = useState([]);
-  
+    
     const handleSearchChange = (event) => {
       setSearchQuery(event.target.value);
     };
@@ -55,15 +54,6 @@ const NotRequired = () => {
       }
     };
 
-    const handleIncidentCheckboxChange = (event) => {
-      const { value, checked } = event.target;
-  
-      if (checked) {
-        setFilterIncident([...filterIncident, value]);
-      } else {
-        setFilterIncident(filterIncident.filter((incident) => incident !== value));
-      }
-    };
 
     const getCalibrated = ()=> {
         const calibrated = [
@@ -227,9 +217,6 @@ const NotRequired = () => {
       if (filterDepartments.length > 0) {
         filteredData = filteredData.filter((request) => filterDepartments.includes(request.Dept));
       }
-      if (filterIncident.length > 0) {
-        filteredData = filteredData.filter((request) => filterIncident.includes(request.Active));
-      }
        if (sortOption === 'aToZ') {
         filteredData.sort((a, b) => a.Asset.localeCompare(b.Asset));
       } else if (sortOption === 'zToA') {
@@ -288,17 +275,6 @@ const NotRequired = () => {
                       label={<Typography style={{color:'#212427', fontSize:'14px', fontWeight:'500'}}>ICU</Typography>}
                     />
                  </MenuItem>
-                 <Typography sx={{color:'#1746A2', fontSize:'18px', fontWeight:'500', marginLeft:'18px'}}>Required?</Typography>
-                  <MenuItem>
-                 <FormControlLabel
-                      control={<Checkbox sx={{color:'#212427', '&.Mui-checked': {color: '#FF731D'}}} checked={filterIncident.includes('Required')} onChange={handleIncidentCheckboxChange} value="Required" />}
-                      label={<Typography style={{color:'#212427', fontSize:'14px', fontWeight:'500'}}>Required</Typography>}
-                    />
-                  <FormControlLabel
-                      control={<Checkbox sx={{color:'#212427', '&.Mui-checked': {color: '#FF731D'}}} checked={filterIncident.includes('Not Required')} onChange={handleIncidentCheckboxChange} value="Not Required" />}
-                      label={<Typography style={{color:'#212427', fontSize:'14px', fontWeight:'500'}}>Not Required</Typography>}
-                    />
-                  </MenuItem>
                 </Menu>
                 </Box>
                 </Box>
