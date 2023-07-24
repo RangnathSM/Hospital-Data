@@ -504,7 +504,7 @@ const Hospital = () => {
             <Link to='/departments' style={{textDecoration:'none'}}><Card sx={{borderRadius:'20px', border:'none', height:'100%',width:{xl:'688px', lg:'630px', md:'688px', sm:'550px', xs:'460px'}}}>
               <CardContent>
                     <Typography sx={{fontSize:'18px', fontWeight:'500', color:'#1746A2',marginLeft:'10px', margintop:'20px'}}>Department Asset</Typography>
-                    <Chart
+                     <Chart
                         chartType="PieChart"
                         data={departmentsData}
                         options={{  is3D: true , width:'200px', slices:[  {color: '#75cbed'}, {color: '#e0b1f6',}, {color: '#61CEAA'}, {color: '#dc9819'}, {color: '#f8ca9e'}], legend:{textStyle: {

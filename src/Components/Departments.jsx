@@ -100,7 +100,7 @@ const Departments = () => {
               },
               {
               Dept:'OP',
-              Asset:['Smart PFT_USB', 'USB', 'ECG Monitor', 'PFT', 'USB-PFT'],
+              Asset:['Smart PFT_USB', 'USB', 'ECG Monitor',],
               InCharge:'Dhanush',
             },
             {
@@ -110,7 +110,7 @@ const Departments = () => {
             },
             {
               Dept:'OP',
-              Asset:['Smart PFT_USB', 'ECG Monitor', 'PFT', 'USB-PFT'],
+              Asset:['Smart PFT_USB', 'ECG Monitor', 'PFT', ],
               InCharge:'Arunraj',
             },
             {
@@ -200,7 +200,7 @@ const Departments = () => {
                         <TableRow display="flex"  key={index}>
                         <TableCell maxWidth='1030px' sx={{background:'white',borderColor:'black', padding:'10px'}}>
                         <Box display='flex' width='1030px'>
-                        <Typography align="left" sx={{fontSize:'18px', fontWeight:'500', width:'250px',height:'30px', borderColor:'black', color:'#1746A2', marginLeft:'2px'}} component="th"><Link style={{textDecoration:'none',color:'#1746A2', borderBottom:'2px solid #1746A2'}} >{request.Dept}</Link> </Typography>
+                        <Typography align="left" sx={{fontSize:'18px', fontWeight:'500', width:'250px',height:'30px', borderColor:'black', color:'#1746A2', marginLeft:'2px'}} component="th"><Link to={`/departmentsDetailspage/${request.Dept}`} style={{textDecoration:'none',color:'#1746A2', borderBottom:'2px solid #1746A2'}} >{request.Dept}</Link> </Typography>
                         <Typography align="left" sx={{fontSize:'18px', fontWeight:'500',color:'#212427',width:'200px',height:'30px', borderColor:'black',marginLeft:'190px'}}>{request.Asset.length}</Typography>
                         <Typography align="left" sx={{fontSize:'18px', fontWeight:'500', color:'#212427',width:'200px',height:'30px', borderColor:'black', marginLeft:'140px'}}>{request.InCharge}</Typography>
                         </Box>

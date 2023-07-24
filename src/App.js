@@ -11,6 +11,7 @@ import Departments from './Components/Departments';
 import Calibrated from './Components/Calibrated';
 import NotCalibrated from './Components/NotCalibrated';
 import NotRequired from './Components/NotRequired';
+import DepartmentDetails from './Components/DepartmentDetails';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path='/calibratedpage' element={<Calibrated/>} />
         <Route path='/notcalibratedpage' element={<NotCalibrated/>} />
         <Route path='/notrequiredpage' element={<NotRequired/>} />
+        <Route path='/departmentsdetailspage/:Dept' element={<DepartmentDetails/>} />
       </Routes>
     </Box>
   );
