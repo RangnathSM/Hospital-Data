@@ -2,12 +2,14 @@ import { Card,CardContent, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import { Grid} from '@mui/material';
 import { Chart } from "react-google-charts";
-import {Link, useNavigate} from 'react-router-dom'
+import {Link, useNavigate, } from 'react-router-dom'
 import '../Styles/hospital.css'
+import {useState, useEffect } from 'react';
 
 const Hospital = () => {
 
   let navigate = useNavigate('');
+  let [currDept, setCurrDept] = useState('');
 
 
     const hospitalData = {
@@ -18,11 +20,11 @@ const Hospital = () => {
         openService: 23,
         clearedService:12,
         departments: [
-          {Dept:'Radiology', name: 'Radiology Asset', percentage: 11},
-          {Dept:'ECHO', name: 'ECHO Asset', percentage: 2 },
-          {Dept:'OP', name: 'OP Asset', percentage: 2},
-          {Dept:'ICU', name: 'ICU Asset', percentage: 2 },
-          {Dept:'ECG', name: 'ECG Asset', percentage: 7 },
+          {Dept:'Radiology', name: 'Radiology', percentage: 11},
+          {Dept:'ECHO', name: 'ECHO', percentage: 2 },
+          {Dept:'OP', name: 'OP', percentage: 2},
+          {Dept:'ICU', name: 'ICU', percentage: 2 },
+          {Dept:'ECG', name: 'ECG', percentage: 7 },
         ],
         calibration: [
           { task: 'Calibrated', percentage: 70, },
@@ -472,14 +474,17 @@ const Hospital = () => {
 
       const handleClick = (slices) => {
         
-        const dept = departmentsData[slices.row + 0][1];
-        
-        const currentDept = window.location.pathname.split('/departmentsdetailspage')[0];
-    
-        if (dept === currentDept) {
-          navigate(`/departmentsdetailspage/:Dept/${dept}`);
-        }
+        const dept = departmentsData[slices.row + 1][0];
+        setCurrDept(dept);
       };
+
+      useEffect (() => {
+        if (currDept) {
+          navigate(`/departmentsdetailspage/${currDept}`);
+        }
+      },[currDept, navigate])
+
+   
 
     return ( 
         <Box  display='flex' maxWidth='100%' maxHeight='100%' sx={{background:'#FAF5EE',}}>
@@ -514,12 +519,13 @@ const Hospital = () => {
             </Grid>
             </Box>
 
-            <Link to='/departments' style={{textDecoration:'none'}}>
+           
             <Box  width={{xl:'688px', lg:'630px', md:'688px', sm:'550px', xs:'460px'}} height='400px' >
             <Grid  height='400px' sx={{background:'white'}} marginTop='20px' borderRadius='20px' border= '1px solid #F7811740' boxShadow='0px 0px 4px 0px #0000001F'>
               <Card sx={{borderRadius:'20px', border:'none', height:'100%',width:{xl:'688px', lg:'630px', md:'688px', sm:'550px', xs:'460px'}}}>
               <CardContent>
-                    <Typography sx={{fontSize:'18px', fontWeight:'500', color:'#1746A2',marginLeft:'10px', margintop:'20px'}}>Department Asset</Typography>
+              <Link to='/departments' style={{textDecoration:'none'}}><Typography sx={{fontSize:'18px', fontWeight:'500', color:'#1746A2',marginLeft:'10px', margintop:'20px'}}>Department Asset</Typography> </Link>
+
                      <Chart
                         chartType="PieChart"
                         data={departmentsData}
@@ -530,16 +536,24 @@ const Hospital = () => {
                       },} }}
                       chartEvents={[
                         {
-                          eventName: 'select',
-                          callback: ({ chartWrapper }) => {
+                          eventName: "ready",
+                          callback: ({chartWrapper, google}) => {
                             const chart = chartWrapper.getChart();
-                            const selection = chart.getSelection();
-                            if (selection.length === 1) {
-                              handleClick(selection[0]);
-                            }
+                            google.visualization.events.addListener(
+                              chart,
+                              "select",
+                              () => {
+                                const chart = chartWrapper.getChart();
+                                const selectedItem = chart.getSelection()[0];
+                                console.log(selectedItem);
+                                if (selectedItem) {
+                                  handleClick(selectedItem);
+                                }
+                              }
+                            );
                           },
                         },
-                      ]}
+                      ]}
                         width='100%'
                         height='351px'
                         borderRadius='20px'
@@ -549,8 +563,7 @@ const Hospital = () => {
                     </Card>
             </Grid>
             </Box>
-            </Link>
-
+           
             
             <Box width={{xl:'520px', lg:'520px', md:'520px', sm:'520px', xs:'460px'}} marginLeft={{xl:'0px', lg:'0px', md:'80px', sm:'15px'}}>
             <Grid width={{xl:'520px', lg:'520px', md:'520px', sm:'520px', xs:'460px'}} maxHeight='180px' sx={{background:'white'}} marginTop='20px' borderRadius='20px' border= '1px solid #F7811740' boxShadow='0px 0px 4px 0px #0000001F'>
