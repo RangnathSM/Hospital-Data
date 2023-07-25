@@ -259,15 +259,15 @@ const DepartmentDetails = () => {
       const selectedDept = filteredDepartments.filter(item => item.Dept === Dept);
     
     return ( 
-        <Box maxWidth='100vw' background='#FAF5EE'>
+        <Box maxWidth='100vw' sx={{background:'#FAF5EE', paddingY:'20px'}} >
          <Box marginLeft={{xl:'250px', lg:'90px'}}>
          <Box display='flex' justifyContent={'space-between'} width='68vw' >
          
                 <Box>
-                    <Typography sx={{fontSize:{xl:'24px', lg:'24px', md:'22px', sm:'20px', xs:'20px'}, fontWeight:'500', color:'#FF731D',marginTop:'35px', marginLeft:'20px',}} >{selectedDept[0]?.Dept}</Typography>
+                    <Typography sx={{fontSize:{xl:'24px', lg:'24px', md:'22px', sm:'20px', xs:'20px'}, fontWeight:'500', color:'#FF731D',marginTop:'20px', marginLeft:'20px',}} >{selectedDept[0]?.Dept}</Typography>
                 </Box>
          
-                <Box display='flex' marginTop={{xl:'10px', lg:'10px', md:'10px', sm:'30px', xs:'30px'}}>
+                <Box display='flex' >
                 <Box>
                 <TextField value={searchQuery} onChange={handleSearchChange} InputProps={{startAdornment: (<InputAdornment><IconButton><SearchIcon /></IconButton></InputAdornment>)}} placeholder='Search' sx={{  "& fieldset": { borderRadius:'36px',border: "1px solid black", height:'56px', maxWidth:'247px' } }}></TextField>
                 </Box>
@@ -304,7 +304,7 @@ const DepartmentDetails = () => {
                 </Box>
                 </Box>
             </Box>
-            <Box maxWidth='1030px' minHeight='100%' sx={{boxShadow : "0px 0px 4px 0px #00000033", border: "0px solid #1746A280", borderRadius:'15px', marginTop:{xl:'20px', lg:'20px', md:'20px', sm:'20px', xs:'20px'}, marginLeft:{xl:'0px', lg:'0px', md:'0px'}}} >
+            <Box maxWidth='1030px' minHeight='100%' sx={{boxShadow : "0px 0px 4px 0px #00000033",background:'#FFFFFF', border: "0px solid #1746A280", borderRadius:'15px', marginTop:{xl:'20px', lg:'20px', md:'20px', sm:'20px', xs:'20px'}, marginLeft:{xl:'0px', lg:'0px', md:'0px'}}} >
                 <TableContainer sx={{ minWidth:{xl:1030, lg:1030, md:850, sm:500, xs:400}, minHeight:'100%',borderRadius:'15px', }} aria-label="simple table">
                 <Table>
                     <TableHead width='1030px' height='50px'>
