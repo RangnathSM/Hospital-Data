@@ -74,7 +74,7 @@ const DepartmentDetails = () => {
                 Status: 'Not Working',
                 Date: '2023/05/04',
                 Brand: 'APL',
-                SerialNo: 'BB34456TR'
+                SerialNo: 'AB35556TQ'
             },
             {
                 Dept:'Radiology',
@@ -82,7 +82,7 @@ const DepartmentDetails = () => {
                 Status: 'Working',
                 Date: '2023/06/04',
                 Brand: 'BPL',
-                SerialNo: 'BB34456TR'
+                SerialNo: 'CB36456TR'
             },
             {
                 Dept:'Radiology',
@@ -90,7 +90,7 @@ const DepartmentDetails = () => {
                 Status: 'Not Working',
                 Date: '2023/07/04',
                 Brand: 'APL',
-                SerialNo: 'BB34456TR'
+                SerialNo: 'DB36256TR'
             },
             {
                 Dept:'Radiology',
@@ -98,7 +98,7 @@ const DepartmentDetails = () => {
                 Status: 'Working',
                 Date: '2023/08/04',
                 Brand: 'BPL',
-                SerialNo: 'BB34456TR'
+                SerialNo: 'BA34456TR'
             },
             {
                 
@@ -115,7 +115,7 @@ const DepartmentDetails = () => {
                 Status: 'Not Working',
                 Date: '2023/06/04',
                 Brand: 'APL',
-                SerialNo: 'BB34456TR'
+                SerialNo: 'CB36456TR'
             },
             {
                 Dept:'ECG',
@@ -123,7 +123,7 @@ const DepartmentDetails = () => {
                 Status: 'Working',
                 Date: '2023/07/04',
                 Brand: 'BPL',
-                SerialNo: 'BB34456TR'
+                SerialNo: 'DB34456TR'
             },
             {
                
@@ -132,7 +132,7 @@ const DepartmentDetails = () => {
                 Status: 'Working',
                 Date: '2023/05/04',
                 Brand: 'BPL',
-                SerialNo: 'BB34456TR'
+                SerialNo: 'CB34456TR'
             },
             {
                 Dept:'ICU',
@@ -148,7 +148,7 @@ const DepartmentDetails = () => {
                 Status: 'Working',
                 Date: '2023/06/04',
                 Brand: 'APL',
-                SerialNo: 'BB34456TR'
+                SerialNo: 'DB34456TR'
             },
             {
                 Dept:'ICU',
@@ -156,7 +156,7 @@ const DepartmentDetails = () => {
                 Status: 'Not Working',
                 Date: '2023/08/04',
                 Brand: 'BPL',
-                SerialNo: 'BB34456TR'
+                SerialNo: 'SB34456TQ'
             },
             {
                 
@@ -173,7 +173,7 @@ const DepartmentDetails = () => {
                 Status: 'Not Working',
                 Date: '2023/05/04',
                 Brand: 'APL',
-                SerialNo: 'BB34456TR'
+                SerialNo: 'AB35456TR'
             },
             {
                 Dept:'ECHO',
@@ -181,7 +181,7 @@ const DepartmentDetails = () => {
                 Status: 'Working',
                 Date: '2023/06/04',
                 Brand: 'BPL',
-                SerialNo: 'BB34456TR'
+                SerialNo: 'DB34456TL'
             },
             {
                 Dept:'ECHO',
@@ -189,7 +189,7 @@ const DepartmentDetails = () => {
                 Status: 'Not Working',
                 Date: '2023/08/04',
                 Brand: 'APL',
-                SerialNo: 'BB34456TR'
+                SerialNo: 'CB34456TT'
             },
             {
                 Dept:'ECHO',
@@ -197,7 +197,7 @@ const DepartmentDetails = () => {
                 Status: 'Working',
                 Date: '2023/09/04',
                 Brand: 'BPL',
-                SerialNo: 'BB34456TR'
+                SerialNo: 'SB34456TR'
             },
             {
                
@@ -214,7 +214,7 @@ const DepartmentDetails = () => {
                 Status: 'Not Working',
                 Date: '2023/09/04',
                 Brand: 'BPL',
-                SerialNo: 'BB34456TR'
+                SerialNo: 'AB34456TR'
             },
             {
                 Dept:'OP',
@@ -222,7 +222,7 @@ const DepartmentDetails = () => {
                 Status: 'Working',
                 Date: '2023/09/04',
                 Brand: 'BPL',
-                SerialNo: 'BB34456TR'
+                SerialNo: 'DB34456TR'
             },
 
 
@@ -252,7 +252,8 @@ const DepartmentDetails = () => {
       }
 
       const filteredDepartments = DepartmentDetails().filter((request) =>
-       request.AssetName.toLowerCase().includes(searchQuery.toLowerCase())
+       request.AssetName.toLowerCase().includes(searchQuery.toLowerCase()) ||
+       request.SerialNo.toLowerCase().includes(searchQuery.toLowerCase())
      );
 
       const {Dept} = useParams();

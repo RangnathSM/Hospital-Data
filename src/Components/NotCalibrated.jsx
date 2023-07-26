@@ -66,141 +66,39 @@ const NotCalibrated = () => {
     };
 
     const getCalibrated = ()=> {
-        const calibrated = [
-            {
-                id:1,
-                Asset:'Smart PFT USB',
-                Dept:'Radiology',
-                SerialNo:'BB34456TR',
-                Status:'Calibrated',
-                Date:'2023/05/04',
-                DueDate:'2023/09/05'
-            },
-            {
-                id:2,
-                Asset:'Apolo PFT USB',
-                Dept:'ECG',
-                SerialNo:'BB34456TR',
-                Status:'Calibrated',
-                Date:'2023/03/04',
-                DueDate:'2023/05/05'
-            },
-            {
-                id:3,
-                Asset:'Max USB Smart',
-                Dept:'ICU',
-                SerialNo:'BB34456TR',
-                Status:'Calibrated',
-                Date:'2023/05/06',
-                DueDate:'2023/09/06'
-            },
-            {
-                id:1,
-                Asset:'Smart PFT USB',
-                Dept:'Radiology',
-                SerialNo:'BB34456TR',
-                Status:'Not Calibrated',
-                Active:'Not Required'
-            },
-            {
-                id:2,
-                Asset:'Apolo PFT USB',
-                Dept:'ECG',
-                SerialNo:'BB34456TR',
-                Status:'Not Calibrated',
-                Active:'Required'
-            },
-            {
-                id:3,
-                Asset:'Max USB Smart',
-                Dept:'ICU',
-                SerialNo:'BB34456TR',
-                Status:'Not Calibrated',
-                Active:'Not Required'
-            },
-            {
-                id:1,
-                Asset:'Narayan PFT USB',
-                Dept:'Radiology',
-                SerialNo:'BB34456TR',
-                Status:'Calibrated',
-                Date:'2023/02/04',
-                DueDate:'2023/06/05'
-            },
-            {
-                id:2,
-                Asset:'Subbhaiha PFT USB',
-                Dept:'ECG',
-                SerialNo:'BB34456TR',
-                Status:'Calibrated',
-                Date:'2023/05/04',
-                DueDate:'2023/09/05'
-            },
-            {
-                id:3,
-                Asset:'Megan USB Smart',
-                Dept:'ICU',
-                SerialNo:'BB34456TR',
-                Status:'Calibrated',
-                Date:'2023/05/06',
-                DueDate:'2023/09/06'
-            },
-            {
-                id:1,
-                Asset:'Narayan PFT USB',
-                Dept:'Radiology',
-                SerialNo:'BB34456TR',
-                Status:'Not Calibrated',
-                Active:'Not Required'
-            },
-            {
-                id:2,
-                Asset:'Subbhaiha PFT USB',
-                Dept:'ECG',
-                SerialNo:'BB34456TR',
-                Status:'Not Calibrated',
-                Active:'Required'
-            },
-            {
-                id:3,
-                Asset:'Megan USB Smart',
-                Dept:'ICU',
-                SerialNo:'BB34456TR',
-                Status:'Not Calibrated',
-                Active:'Not Required'
-            },
-            {
-                id:1,
-                Asset:'Smart PFT USB',
-                Dept:'Radiology',
-                SerialNo:'BB34456TR',
-                Status:'Calibrated',
-                Date:'2023/05/04',
-                DueDate:'2023/09/05'
-            },
-            {
-                id:2,
-                Asset:'Apolo PFT USB',
-                Dept:'ECG',
-                SerialNo:'BB34456TR',
-                Status:'Calibrated',
-                Date:'2023/03/04',
-                DueDate:'2023/05/05'
-            },
-            {
-                id:3,
-                Asset:'Max USB Smart',
-                Dept:'ICU',
-                SerialNo:'BB34456TR',
-                Status:'Calibrated',
-                Date:'2023/05/06',
-                DueDate:'2023/09/06'
-            },
-            {
+      const calibrated = [
+          {
               id:1,
               Asset:'Smart PFT USB',
               Dept:'Radiology',
+              SerialNo:'AB34456TR',
+              Status:'Calibrated',
+              Date:'2023/05/04',
+              DueDate:'2023/09/05'
+          },
+          {
+              id:2,
+              Asset:'Apolo PFT USB',
+              Dept:'ECG',
               SerialNo:'BB34456TR',
+              Status:'Calibrated',
+              Date:'2023/03/04',
+              DueDate:'2023/05/05'
+          },
+          {
+              id:3,
+              Asset:'Max USB Smart',
+              Dept:'ICU',
+              SerialNo:'CB34456TR',
+              Status:'Calibrated',
+              Date:'2023/05/06',
+              DueDate:'2023/09/06'
+          },
+          {
+              id:1,
+              Asset:'Smart PFT USB',
+              Dept:'Radiology',
+              SerialNo:'DB34456TR',
               Status:'Not Calibrated',
               Active:'Not Required'
           },
@@ -208,7 +106,7 @@ const NotCalibrated = () => {
               id:2,
               Asset:'Apolo PFT USB',
               Dept:'ECG',
-              SerialNo:'BB34456TR',
+              SerialNo:'EB34456TR',
               Status:'Not Calibrated',
               Active:'Required'
           },
@@ -216,31 +114,114 @@ const NotCalibrated = () => {
               id:3,
               Asset:'Max USB Smart',
               Dept:'ICU',
-              SerialNo:'BB34456TR',
+              SerialNo:'FB34456TR',
               Status:'Not Calibrated',
               Active:'Not Required'
           },
-        ]
+          {
+              id:1,
+              Asset:'Narayan PFT USB',
+              Dept:'Radiology',
+              SerialNo:'GB34456TR',
+              Status:'Calibrated',
+              Date:'2023/02/04',
+              DueDate:'2023/06/05'
+          },
+          {
+              id:2,
+              Asset:'Subbhaiha PFT USB',
+              Dept:'ECG',
+              SerialNo:'HB34456TR',
+              Status:'Calibrated',
+              Date:'2023/05/04',
+              DueDate:'2023/09/05'
+          },
+          {
+              id:3,
+              Asset:'Megan USB Smart',
+              Dept:'ICU',
+              SerialNo:'IB34456TR',
+              Status:'Calibrated',
+              Date:'2023/05/06',
+              DueDate:'2023/09/06'
+          },
+          {
+              id:1,
+              Asset:'Narayan PFT USB',
+              Dept:'Radiology',
+              SerialNo:'JB34456TR',
+              Status:'Not Calibrated',
+              Active:'Not Required'
+          },
+          {
+              id:2,
+              Asset:'Subbhaiha PFT USB',
+              Dept:'ECG',
+              SerialNo:'KB34456TR',
+              Status:'Not Calibrated',
+              Active:'Required'
+          },
+          {
+              id:3,
+              Asset:'Megan USB Smart',
+              Dept:'ICU',
+              SerialNo:'LB34456TR',
+              Status:'Not Calibrated',
+              Active:'Not Required'
+          },
+          {
+              id:1,
+              Asset:'Smart PFT USB',
+              Dept:'Radiology',
+              SerialNo:'MB34456TR',
+              Status:'Calibrated',
+              Date:'2023/05/04',
+              DueDate:'2023/09/05'
+          },
+          {
+              id:2,
+              Asset:'Apolo PFT USB',
+              Dept:'ECG',
+              SerialNo:'NB34456TR',
+              Status:'Calibrated',
+              Date:'2023/03/04',
+              DueDate:'2023/05/05'
+          },
+          {
+              id:3,
+              Asset:'Max USB Smart',
+              Dept:'ICU',
+              SerialNo:'OB34456TR',
+              Status:'Calibrated',
+              Date:'2023/05/06',
+              DueDate:'2023/09/06'
+          },
+      ]
 
-        let filteredData = [...calibrated];
+      let filteredData = [...calibrated];
+
+    if (filterDepartments.length > 0) {
+      filteredData = filteredData.filter((request) => filterDepartments.includes(request.Dept));
+    }
+
+    
+    if (sortOption === 'newestToOldest') {
+      filteredData.sort((a, b) => new Date(b.DueDate) - new Date(a.DueDate));
+    } else if (sortOption === 'oldestToNewest') {
+      filteredData.sort((a, b) => new Date(a.DueDate) - new Date(b.DueDate));
+    } else if (sortOption === 'aToZ') {
+      filteredData.sort((a, b) => a.Asset.localeCompare(b.Asset));
+    } else if (sortOption === 'zToA') {
+      filteredData.sort((a, b) => b.Asset.localeCompare(a.Asset));
+    }
+    return filteredData;
+  };
   
-      if (filterDepartments.length > 0) {
-        filteredData = filteredData.filter((request) => filterDepartments.includes(request.Dept));
-      }
-      if (filterIncident.length > 0) {
-        filteredData = filteredData.filter((request) => filterIncident.includes(request.Active));
-      }
-       if (sortOption === 'aToZ') {
-        filteredData.sort((a, b) => a.Asset.localeCompare(b.Asset));
-      } else if (sortOption === 'zToA') {
-        filteredData.sort((a, b) => b.Asset.localeCompare(a.Asset));
-      }
-      return filteredData;
-    };
     
 
     const filteredIncidents = getCalibrated().filter((request) =>
-    request.Asset.toLowerCase().includes(searchQuery.toLowerCase())
+    request.Asset.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    request.SerialNo.toLowerCase().includes(searchQuery.toLowerCase())
   );
   const clearedIncidents = filteredIncidents.filter(
     (incident) => incident.Status === 'Not Calibrated'

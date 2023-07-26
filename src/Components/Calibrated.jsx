@@ -60,7 +60,7 @@ const Calibrated = () => {
                 id:1,
                 Asset:'Smart PFT USB',
                 Dept:'Radiology',
-                SerialNo:'BB34456TR',
+                SerialNo:'AB34456TR',
                 Status:'Calibrated',
                 Date:'2023/05/04',
                 DueDate:'2023/09/05'
@@ -78,7 +78,7 @@ const Calibrated = () => {
                 id:3,
                 Asset:'Max USB Smart',
                 Dept:'ICU',
-                SerialNo:'BB34456TR',
+                SerialNo:'CB34456TR',
                 Status:'Calibrated',
                 Date:'2023/05/06',
                 DueDate:'2023/09/06'
@@ -87,7 +87,7 @@ const Calibrated = () => {
                 id:1,
                 Asset:'Smart PFT USB',
                 Dept:'Radiology',
-                SerialNo:'BB34456TR',
+                SerialNo:'DB34456TR',
                 Status:'Not Calibrated',
                 Active:'Not Required'
             },
@@ -95,7 +95,7 @@ const Calibrated = () => {
                 id:2,
                 Asset:'Apolo PFT USB',
                 Dept:'ECG',
-                SerialNo:'BB34456TR',
+                SerialNo:'EB34456TR',
                 Status:'Not Calibrated',
                 Active:'Required'
             },
@@ -103,7 +103,7 @@ const Calibrated = () => {
                 id:3,
                 Asset:'Max USB Smart',
                 Dept:'ICU',
-                SerialNo:'BB34456TR',
+                SerialNo:'FB34456TR',
                 Status:'Not Calibrated',
                 Active:'Not Required'
             },
@@ -111,7 +111,7 @@ const Calibrated = () => {
                 id:1,
                 Asset:'Narayan PFT USB',
                 Dept:'Radiology',
-                SerialNo:'BB34456TR',
+                SerialNo:'GB34456TR',
                 Status:'Calibrated',
                 Date:'2023/02/04',
                 DueDate:'2023/06/05'
@@ -120,7 +120,7 @@ const Calibrated = () => {
                 id:2,
                 Asset:'Subbhaiha PFT USB',
                 Dept:'ECG',
-                SerialNo:'BB34456TR',
+                SerialNo:'HB34456TR',
                 Status:'Calibrated',
                 Date:'2023/05/04',
                 DueDate:'2023/09/05'
@@ -129,7 +129,7 @@ const Calibrated = () => {
                 id:3,
                 Asset:'Megan USB Smart',
                 Dept:'ICU',
-                SerialNo:'BB34456TR',
+                SerialNo:'IB34456TR',
                 Status:'Calibrated',
                 Date:'2023/05/06',
                 DueDate:'2023/09/06'
@@ -138,7 +138,7 @@ const Calibrated = () => {
                 id:1,
                 Asset:'Narayan PFT USB',
                 Dept:'Radiology',
-                SerialNo:'BB34456TR',
+                SerialNo:'JB34456TR',
                 Status:'Not Calibrated',
                 Active:'Not Required'
             },
@@ -146,7 +146,7 @@ const Calibrated = () => {
                 id:2,
                 Asset:'Subbhaiha PFT USB',
                 Dept:'ECG',
-                SerialNo:'BB34456TR',
+                SerialNo:'KB34456TR',
                 Status:'Not Calibrated',
                 Active:'Required'
             },
@@ -154,7 +154,7 @@ const Calibrated = () => {
                 id:3,
                 Asset:'Megan USB Smart',
                 Dept:'ICU',
-                SerialNo:'BB34456TR',
+                SerialNo:'LB34456TR',
                 Status:'Not Calibrated',
                 Active:'Not Required'
             },
@@ -162,7 +162,7 @@ const Calibrated = () => {
                 id:1,
                 Asset:'Smart PFT USB',
                 Dept:'Radiology',
-                SerialNo:'BB34456TR',
+                SerialNo:'MB34456TR',
                 Status:'Calibrated',
                 Date:'2023/05/04',
                 DueDate:'2023/09/05'
@@ -171,7 +171,7 @@ const Calibrated = () => {
                 id:2,
                 Asset:'Apolo PFT USB',
                 Dept:'ECG',
-                SerialNo:'BB34456TR',
+                SerialNo:'NB34456TR',
                 Status:'Calibrated',
                 Date:'2023/03/04',
                 DueDate:'2023/05/05'
@@ -180,7 +180,7 @@ const Calibrated = () => {
                 id:3,
                 Asset:'Max USB Smart',
                 Dept:'ICU',
-                SerialNo:'BB34456TR',
+                SerialNo:'OB34456TR',
                 Status:'Calibrated',
                 Date:'2023/05/06',
                 DueDate:'2023/09/06'
@@ -208,7 +208,8 @@ const Calibrated = () => {
     
 
     const filteredIncidents = getCalibrated().filter((request) =>
-    request.Asset.toLowerCase().includes(searchQuery.toLowerCase())
+    request.Asset.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    request.SerialNo.toLowerCase().includes(searchQuery.toLowerCase())
   );
   const clearedIncidents = filteredIncidents.filter(
     (incident) => incident.Status === 'Calibrated'

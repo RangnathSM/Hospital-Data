@@ -524,7 +524,7 @@ const Hospital = () => {
             <Grid  height='400px' sx={{background:'white'}} marginTop='20px' borderRadius='20px' border= '1px solid #F7811740' boxShadow='0px 0px 4px 0px #0000001F'>
               <Card sx={{borderRadius:'20px', border:'none', height:'100%',width:{xl:'688px', lg:'630px', md:'688px', sm:'550px', xs:'460px'}}}>
               <CardContent>
-              <Link to='/departments' style={{textDecoration:'none'}}><Typography sx={{fontSize:'18px', fontWeight:'500', color:'#1746A2',marginLeft:'10px', margintop:'20px'}}>Department Asset</Typography> </Link>
+              <Link to='departments' style={{textDecoration:'none'}}><Typography sx={{fontSize:'18px', fontWeight:'500', color:'#1746A2',marginLeft:'10px', margintop:'20px'}}>Department Asset</Typography> </Link>
 
                      <Chart
                         chartType="PieChart"
